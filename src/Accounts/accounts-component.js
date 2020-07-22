@@ -53,8 +53,9 @@ const Accounts = () => {
             <tr className={isActive(account) ? 'clickable': ''} 
                 onClick={() => isActive(account) && handleClick(account.id)} 
                 key={account.id} >
-                <td className={connectedAccounts[account.id].isHiglight ?'highlight' : ''}>
+                <td className={connectedAccounts[account.id].isHiglight ? 'highlight' : ''}>
                     {account.id}
+                    <div className='square'/>
                 </td>
                 <td>{account.name}</td>
                 <td>{account.manager.name}</td>
@@ -83,7 +84,8 @@ const Accounts = () => {
                 key={account.id}
                 onClick={() => isActive(account) && handleClick(account.id, true)}>
                 <td className={connectedAccounts[account.id].isCompanyHighlight ?'highlight' : ''}>
-                    {account.id}</td>
+                    {account.id}
+                    <div className='square square-position'/></td>
                 <td>{account.company}</td>
                 <td>{account.name}</td>
                 <td>{account.status}</td>
@@ -91,7 +93,7 @@ const Accounts = () => {
         ));
 
         return (
-            <table>
+            <table className='accounts-table'>
                 <thead>
                     <tr>
                     <th>ID</th>

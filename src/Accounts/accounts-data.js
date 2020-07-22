@@ -14,7 +14,7 @@ export const accountsData = [
 		name: 'Bob',
 		status: 'active',
         manager: {id: 1, name: 'Alice'},
-        workersId: [5],
+        workersId: [5,6],
         toHighlight: false
     },
     {
@@ -41,6 +41,24 @@ export const accountsData = [
 		name: 'Dave',
 		status: 'active',
         manager: {id: 2, name:'Bob'},
+        workersId: [],
+        toHighlight: false
+    },
+    {
+		id: 6,
+		company: 'Amazon',
+		name: 'Chen',
+		status: 'active',
+        manager: {id: 2, name:'Bob'},
+        workersId: [7],
+        toHighlight: false
+    },
+    {
+		id: 7,
+		company: 'Intel',
+		name: 'Leo',
+		status: 'closed',
+        manager: {id: 6, name:'Chen'},
         workersId: [],
         toHighlight: false
 	},
