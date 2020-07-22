@@ -37,8 +37,11 @@
         color: red;
     }
 
-    .highlight {
+    table tr .highlight {
         border: 2.5px solid lightskyblue;
+        
+    }
+    .highlight {
         .square {
             width: 7px;
             height: 7px;
@@ -48,14 +51,14 @@
             border: 2px solid white;
         }
     }
-    .accounts-table {
-        .highlight {
-            .square {
-                margin: 4px 0 0 118px;
-            }
+}
+.accounts-table {
+    .highlight {
+        .square {
+            margin: 4px 0 0 118px;
         }
-        td:first-child, th:first-child {
-            border-left: 1.5px solid black;
-        }
+    }
+    td:first-child, th:first-child {
+        border-left: 1.5px solid black;
     }
 }

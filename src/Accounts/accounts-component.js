@@ -19,8 +19,14 @@ const Accounts = () => {
         account.workersId.forEach(workerId => {
             connectedAccount['connections'].push(...accountsData[workerId-1].workersId);
         })
-
         initialConnectedAccounts[account.id] = connectedAccount;
+    });
+    
+    accountsData.map(account => {
+        if(account.workersId !== '') {
+            account.workersId.map(worker => 
+                initialConnectedAccounts[account.id]['connections'].push(...initialConnectedAccounts[worker]['connections']));
+        }
     });
 
     const [connectedAccounts, setConnectedAccounts] = useState(initialConnectedAccounts);    
